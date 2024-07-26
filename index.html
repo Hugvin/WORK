@@ -30,6 +30,17 @@
       transform: translateY(0);
     }
 
+    .slide-in {
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .slide-in.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
     .hero-banner img {
       max-width: 100%;
       height: auto;
@@ -37,6 +48,26 @@
 
     .top-seller-card img {
       border-radius: 50%;
+    }
+
+    .page-transition {
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .page-transition-enter {
+      opacity: 0;
+    }
+
+    .page-transition-enter-active {
+      opacity: 1;
+    }
+
+    .page-transition-exit {
+      opacity: 1;
+    }
+
+    .page-transition-exit-active {
+      opacity: 0;
     }
   </style>
 </head>
@@ -56,9 +87,11 @@
             <ul class="navbar-list">
               <li><a href="#" class="navbar-link">Home</a></li>
               <li><a href="#about" class="navbar-link">About</a></li>
-              <li><a href="#dev" class="navbar-link">Developers</a></li>
-              <li><a href="#inv" class="navbar-link">Server</a></li>
-              <li><a href="https://discord.com/oauth2/authorize?client_id=1261751300983619644&response_type=code&redirect_uri=https%3A%2F%2Fshiftbot.xyz%2Fdashboard&scope=email+guilds+guilds.join" class="btn btn-dashboard">Dashboard</a></li>
+              <li><a href="#features" class="navbar-link">Features</a></li>
+              <li><a href="#developers" class="navbar-link">Developers</a></li>
+              <li><a href="#invites" class="navbar-link">Invite</a></li>
+              <li><a href="#server" class="navbar-link">Server</a></li>
+              <li><a href="https://shiftbot.xyz/dashboard" class="btn btn-dashboard">Dashboard</a></li>
             </ul>
           </nav>
         </div>
@@ -69,7 +102,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="page-transition">
     <article>
       <section class="hero">
         <div class="container">
@@ -82,7 +115,7 @@
             </div>
           </div>
           <figure class="hero-banner">
-            <img src="https://cdn.discordapp.com/attachments/1265910910690791506/1266137004857495693/hhhhAsset_5.png?ex=66a40d79&is=66a2bbf9&hm=344dd9056a3e330befbdbea2a11d9e810db40477400ca88359a4db7ef29646cf&" alt="nft art">
+            <img src="https://cdn.discordapp.com/attachments/1265910910690791506/1266137004857495693/hhhhAsset_5.png?ex=66a40d79&is=66a2bbf9&hm=344dd9056a3e330befbdbea2a11d9e810db40477400ca88359a4db7ef29646cf&" alt="Shift bot logo">
           </figure>
         </div>
       </section>
@@ -105,19 +138,19 @@
               <div class="about-card">
                 <div class="card-number">02</div>
                 <div class="card-icon">
-                  <img src="./assets/images/single-create-sell-item-2.png" alt="collection icon">
+                  <img src="./assets/images/single-create-sell-item-2.png" alt="commands icon">
                 </div>
                 <h3 class="h3 about-card-title">Commands</h3>
-                <p class="about-card-text">100+ Community, Moderation, and Funny commands are included in this bot!</p>
+                <p class="about-card-text">100+ Community, Moderation, and Fun commands included in this bot!</p>
               </div>
             </li>
             <li class="about-item fade-in">
               <div class="about-card">
                 <div class="card-number">03</div>
                 <div class="card-icon">
-                  <img src="./assets/images/single-create-sell-item-3.png" alt="folder icon">
+                  <img src="./assets/images/single-create-sell-item-3.png" alt="security icon">
                 </div>
-                <h3 class="h3 about-card-title">Secured</h3>
+                <h3 class="h3 about-card-title">Security</h3>
                 <p class="about-card-text">All your data in this bot is secured and encrypted. Feel free to use our bot. Any queries related to data can be asked.</p>
               </div>
             </li>
@@ -125,7 +158,7 @@
               <div class="about-card">
                 <div class="card-number">04</div>
                 <div class="card-icon">
-                  <img src="./assets/images/single-create-sell-item-4.png" alt="diamond icon">
+                  <img src="./assets/images/single-create-sell-item-4.png" alt="premium icon">
                 </div>
                 <h3 class="h3 about-card-title">Premium</h3>
                 <p class="about-card-text">We offer premium services that cost robux. Get a bunch of cool features by getting premium!</p>
@@ -135,88 +168,94 @@
         </div>
       </section>
 
-      <section class="top-seller" id="dev">
+      <section class="top-seller" id="developers">
         <div class="container">
           <h2 class="h2 top-seller-title fade-in">Our <span>Developers</span><ion-icon name="chevron-down"></ion-icon></h2>
           <ol class="top-seller-list">
-            <li class="top-seller-item fade-in">
+            <li class="top-seller-item slide-in">
               <a href="#" class="top-seller-card">
                 <div class="card-number">01</div>
                 <figure class="card-avatar">
-                  <img src="https://cdn.discordapp.com/avatars/775378714056851457/33a33383f8116b6155eff1be0a0dc7fe.webp?size=128" alt="Hugvin">
-                  <div class="avatar-badge">
-                    <ion-icon name="checkmark-outline"></ion-icon>
-                  </div>
+                  <img src="https://cdn.discordapp.com/avatars/775378714056851457/33a33383f8116b6155eff1be0d9053a6.webp?size=128" alt="Developer 1">
                 </figure>
-                <div class="card-content">
-                  <h3 class="h5 card-title">Hugvin</h3>
-                  <data>Bot Founder</data>
-                </div>
+                <h3 class="h3 card-title">Sxone</h3>
+                <p class="card-text">Lead Developer</p>
               </a>
             </li>
-            <li class="top-seller-item fade-in">
+            <li class="top-seller-item slide-in">
               <a href="#" class="top-seller-card">
                 <div class="card-number">02</div>
                 <figure class="card-avatar">
-                  <img src="https://cdn.discordapp.com/avatars/980469536568537168/a_d22e74b5025af7ca60476f8bbd957933.webp?size=128" alt="BNP_Plays">
-                  <div class="avatar-badge">
-                    <ion-icon name="checkmark-outline"></ion-icon>
-                  </div>
+                  <img src="https://cdn.discordapp.com/avatars/1031442763717263400/dde41a2682444dc60ec10a79cd9a0e2c.webp?size=128" alt="Developer 2">
                 </figure>
-                <div class="card-content">
-                  <h3 class="h5 card-title">BNP_Plays</h3>
-                  <data>Bot Owner</data>
-                </div>
-              </a>
-            </li>
-            <li class="top-seller-item fade-in">
-              <a href="#" class="top-seller-card">
-                <div class="card-number">03</div>
-                <figure class="card-avatar">
-                  <img src="https://cdn.discordapp.com/avatars/759661890830896138/a_53fc3036c3b8b13f1a7e8e5a097d6c27.webp?size=128" alt="Celestialpluse">
-                  <div class="avatar-badge">
-                    <ion-icon name="checkmark-outline"></ion-icon>
-                  </div>
-                </figure>
-                <div class="card-content">
-                  <h3 class="h5 card-title">Celestial</h3>
-                  <data>Head Bot Developer</data>
-                </div>
+                <h3 class="h3 card-title">Beluga</h3>
+                <p class="card-text">Manager</p>
               </a>
             </li>
           </ol>
         </div>
       </section>
 
-      <section class="newsletter">
+      <section class="contact" id="invites">
         <div class="container">
-          <h2 class="h2 newsletter-title">Join our <span>Community</span></h2>
-          <p class="newsletter-text">Get updates, news, and more directly in your inbox. Subscribe to our newsletter!</p>
-          <a href="https://discord.gg/F2nZXydTJv" class="btn btn-primary">Join Support Server</a>
+          <h2 class="h2 contact-title slide-in">Invite Shift Bot</h2>
+          <p class="contact-text slide-in">Enhance your server with the Shift Bot. Click the button below to invite the bot to your Discord server.</p>
+          <div class="btn-group slide-in">
+            <a href="https://discord.com/oauth2/authorize?client_id=1261747027302416384" class="btn btn-primary">Invite Shift Bot</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="server">
+        <div class="container">
+          <h2 class="h2 contact-title slide-in">Join Our Support Server</h2>
+          <p class="contact-text slide-in">Need help or have questions? Join our support server to get assistance and connect with the community.</p>
+          <div class="btn-group slide-in">
+            <a href="https://discord.gg/F2nZXydTJv" class="btn btn-primary">Join Support Server</a>
+          </div>
         </div>
       </section>
     </article>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Shift Bot. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="./assets/js/script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const fadeElements = document.querySelectorAll('.fade-in');
-      window.addEventListener('scroll', function () {
-        fadeElements.forEach(function (element) {
-          if (element.getBoundingClientRect().top < window.innerHeight - 100) {
-            element.classList.add('visible');
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
           }
         });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-in, .slide-in').forEach(element => {
+        observer.observe(element);
       });
     });
+
+    // Page transition animations
+    document.body.classList.add('page-transition-enter');
+    window.addEventListener('load', () => {
+      document.body.classList.add('page-transition-enter-active');
+      setTimeout(() => {
+        document.body.classList.remove('page-transition-enter', 'page-transition-enter-active');
+      }, 500);
+    });
+
+    window.addEventListener('beforeunload', () => {
+      document.body.classList.add('page-transition-exit');
+      document.body.classList.add('page-transition-exit-active');
+    });
   </script>
+
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
 </body>
 
 </html>
