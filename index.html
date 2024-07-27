@@ -258,4 +258,47 @@
   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
 </body>
 
+    <footer>
+    <div class="container">
+      <div class="footer-links">
+        <div>
+          <a href="https://www.youtube.com/channel/yourchannel" target="_blank">YouTube</a>
+          <a href="https://discord.com/invite/yourserver" target="_blank">Discord</a>
+        </div>
+        <div>
+          <a href="/dashboard">Dashboard</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-service">Terms of Service</a>
+        </div>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/channel/yourchannel" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+        <a href="https://discord.com/invite/yourserver" target="_blank"><ion-icon name="logo-discord"></ion-icon></a>
+      </div>
+      <p>&copy; 2024 Shift Bot. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const fadeInElements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      fadeInElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+
 </html>
