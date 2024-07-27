@@ -3,7 +3,7 @@
     {
       "source": "/dashboard",
       "destination": "/dashboard.html"
-    }
+    },
     {
       "source": "/terms-of-service",
       "destination": "/terms-of-service.html"
