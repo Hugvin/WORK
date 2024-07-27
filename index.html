@@ -19,6 +19,19 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" as="style">
 
   <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -30,17 +43,6 @@
       transform: translateY(0);
     }
 
-    .slide-in {
-      opacity: 0;
-      transform: translateX(-20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    .slide-in.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
     .hero-banner img {
       max-width: 100%;
       height: auto;
@@ -50,24 +52,114 @@
       border-radius: 50%;
     }
 
-    .page-transition {
-      transition: opacity 0.5s ease-in-out;
+    header {
+      background: #1c1c1c;
+      padding: 20px 0;
     }
 
-    .page-transition-enter {
-      opacity: 0;
+    .header-right {
+      display: flex;
+      align-items: center;
     }
 
-    .page-transition-enter-active {
-      opacity: 1;
+    .header-nav-wrapper {
+      flex: 1;
     }
 
-    .page-transition-exit {
-      opacity: 1;
+    .header-actions {
+      display: flex;
+      align-items: center;
     }
 
-    .page-transition-exit-active {
-      opacity: 0;
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #ff4757;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background-color: #1e90ff;
+      color: #fff;
+    }
+
+    .about-list,
+    .top-seller-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .about-item,
+    .top-seller-item {
+      margin-bottom: 20px;
+    }
+
+    .about-card,
+    .top-seller-card {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .about-card img,
+    .top-seller-card img {
+      width: 60px;
+      height: 60px;
+      margin-right: 20px;
+    }
+
+    footer {
+      background: #1c1c1c;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .header-right {
+        flex-direction: column;
+      }
+
+      .header-nav-wrapper {
+        margin-bottom: 10px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+      }
+
+      .footer-links a {
+        margin-bottom: 10px;
+      }
+
+      .social-icons a {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
@@ -87,11 +179,9 @@
             <ul class="navbar-list">
               <li><a href="#" class="navbar-link">Home</a></li>
               <li><a href="#about" class="navbar-link">About</a></li>
-              <li><a href="#features" class="navbar-link">Features</a></li>
-              <li><a href="#developers" class="navbar-link">Developers</a></li>
-              <li><a href="#invites" class="navbar-link">Invite</a></li>
-              <li><a href="#server" class="navbar-link">Server</a></li>
-              <li><a href="https://shiftbot.xyz/dashboard" class="btn btn-dashboard">Dashboard</a></li>
+              <li><a href="#dev" class="navbar-link">Developers</a></li>
+              <li><a href="#inv" class="navbar-link">Server</a></li>
+              <li><a href="https://discord.com/oauth2/authorize?client_id=1261751300983619644&response_type=code&redirect_uri=https%3A%2F%2Fshiftbot.xyz%2Fdashboard&scope=email+guilds+guilds.join" class="btn btn-dashboard">Dashboard</a></li>
             </ul>
           </nav>
         </div>
@@ -102,7 +192,7 @@
     </div>
   </header>
 
-  <main class="page-transition">
+  <main>
     <article>
       <section class="hero">
         <div class="container">
@@ -115,7 +205,7 @@
             </div>
           </div>
           <figure class="hero-banner">
-            <img src="https://cdn.discordapp.com/attachments/1265910910690791506/1266137004857495693/hhhhAsset_5.png?ex=66a40d79&is=66a2bbf9&hm=344dd9056a3e330befbdbea2a11d9e810db40477400ca88359a4db7ef29646cf&" alt="Shift bot logo">
+            <img src="https://cdn.discordapp.com/attachments/1265910910690791506/1266137004857495693/hhhhAsset_5.png?ex=66a40d79&is=66a2bbf9&hm=344dd9056a3e330befbdbea2a11d9e810db40477400ca88359a4db7ef29646cf&" alt="nft art">
           </figure>
         </div>
       </section>
@@ -138,89 +228,81 @@
               <div class="about-card">
                 <div class="card-number">02</div>
                 <div class="card-icon">
-                  <img src="./assets/images/single-create-sell-item-2.png" alt="commands icon">
+                  <img src="./assets/images/single-create-sell-item-2.png" alt="collection icon">
                 </div>
                 <h3 class="h3 about-card-title">Commands</h3>
-                <p class="about-card-text">100+ Community, Moderation, and Fun commands included in this bot!</p>
+                <p class="about-card-text">100+ Community, Moderation, Economy and Game commands to engage your community!</p>
               </div>
             </li>
             <li class="about-item fade-in">
               <div class="about-card">
                 <div class="card-number">03</div>
                 <div class="card-icon">
-                  <img src="./assets/images/single-create-sell-item-3.png" alt="security icon">
+                  <img src="./assets/images/single-create-sell-item-3.png" alt="create icon">
                 </div>
-                <h3 class="h3 about-card-title">Security</h3>
-                <p class="about-card-text">All your data in this bot is secured and encrypted. Feel free to use our bot. Any queries related to data can be asked.</p>
-              </div>
-            </li>
-            <li class="about-item fade-in">
-              <div class="about-card">
-                <div class="card-number">04</div>
-                <div class="card-icon">
-                  <img src="./assets/images/single-create-sell-item-4.png" alt="premium icon">
-                </div>
-                <h3 class="h3 about-card-title">Premium</h3>
-                <p class="about-card-text">We offer premium services that cost robux. Get a bunch of cool features by getting premium!</p>
+                <h3 class="h3 about-card-title">ER:LC Integrations</h3>
+                <p class="about-card-text">High quality and easy to use integrations to enhance your ER:LC server!</p>
               </div>
             </li>
           </ol>
         </div>
       </section>
 
-      <section class="top-seller" id="developers">
+      <section class="top-seller" id="dev">
         <div class="container">
-          <h2 class="h2 top-seller-title fade-in">Our <span>Developers</span><ion-icon name="chevron-down"></ion-icon></h2>
+          <h2 class="h2 section-title">Developers</h2>
           <ol class="top-seller-list">
-            <li class="top-seller-item slide-in">
-              <a href="#" class="top-seller-card">
-                <div class="card-number">01</div>
-                <figure class="card-avatar">
-                  <img src="https://cdn.discordapp.com/avatars/775378714056851457/33a33383f8116b6155eff1be0d9053a6.webp?size=128" alt="Developer 1">
+            <li>
+              <div class="top-seller-card fade-in">
+                <figure class="seller-banner">
+                  <img src="./assets/images/seller-1.png" alt="Hugvin profile picture">
                 </figure>
-                <h3 class="h3 card-title">Sxone</h3>
-                <p class="card-text">Lead Developer</p>
-              </a>
+                <div class="seller-content">
+                  <h3 class="h3 seller-name">Hugvin</h3>
+                  <p class="seller-text">Founder</p>
+                </div>
+              </div>
             </li>
-            <li class="top-seller-item slide-in">
-              <a href="#" class="top-seller-card">
-                <div class="card-number">02</div>
-                <figure class="card-avatar">
-                  <img src="https://cdn.discordapp.com/avatars/1031442763717263400/dde41a2682444dc60ec10a79cd9a0e2c.webp?size=128" alt="Developer 2">
+            <li>
+              <div class="top-seller-card fade-in">
+                <figure class="seller-banner">
+                  <img src="./assets/images/seller-2.png" alt="BNP_Plays profile picture">
                 </figure>
-                <h3 class="h3 card-title">Beluga</h3>
-                <p class="card-text">Manager</p>
-              </a>
+                <div class="seller-content">
+                  <h3 class="h3 seller-name">BNP_Plays</h3>
+                  <p class="seller-text">Co-Founder</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="top-seller-card fade-in">
+                <figure class="seller-banner">
+                  <img src="./assets/images/seller-3.png" alt="Celestial profile picture">
+                </figure>
+                <div class="seller-content">
+                  <h3 class="h3 seller-name">Celestial</h3>
+                  <p class="seller-text">Head Developer</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="top-seller-card fade-in">
+                <figure class="seller-banner">
+                  <img src="./assets/images/seller-4.png" alt="PhantomsOnThePiano profile picture">
+                </figure>
+                <div class="seller-content">
+                  <h3 class="h3 seller-name">PhantomsOnThePiano</h3>
+                  <p class="seller-text">Developer</p>
+                </div>
+              </div>
             </li>
           </ol>
-        </div>
-      </section>
-
-      <section class="contact" id="invites">
-        <div class="container">
-          <h2 class="h2 contact-title slide-in">Invite Shift Bot</h2>
-          <p class="contact-text slide-in">Enhance your server with the Shift Bot. Click the button below to invite the bot to your Discord server.</p>
-          <div class="btn-group slide-in">
-            <a href="https://discord.com/oauth2/authorize?client_id=1261747027302416384" class="btn btn-primary">Invite Shift Bot</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact" id="server">
-        <div class="container">
-          <h2 class="h2 contact-title slide-in">Join Our Support Server</h2>
-          <p class="contact-text slide-in">Need help or have questions? Join our support server to get assistance and connect with the community.</p>
-          <div class="btn-group slide-in">
-            <a href="https://discord.gg/F2nZXydTJv" class="btn btn-primary">Join Support Server</a>
-          </div>
         </div>
       </section>
     </article>
   </main>
 
-  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
-
-    <footer>
+  <footer>
     <div class="container">
       <div class="footer-links">
         <div>
@@ -259,41 +341,6 @@
       fadeInElements.forEach(element => {
         observer.observe(element);
       });
-    });
-
-        document.addEventListener('DOMContentLoaded', function () {
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-      };
-
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll('.fade-in, .slide-in').forEach(element => {
-        observer.observe(element);
-      });
-    });
-
-    // Page transition animations
-    document.body.classList.add('page-transition-enter');
-    window.addEventListener('load', () => {
-      document.body.classList.add('page-transition-enter-active');
-      setTimeout(() => {
-        document.body.classList.remove('page-transition-enter', 'page-transition-enter-active');
-      }, 500);
-    });
-
-    window.addEventListener('beforeunload', () => {
-      document.body.classList.add('page-transition-exit');
-      document.body.classList.add('page-transition-exit-active');
     });
   </script>
 </body>
