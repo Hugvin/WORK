@@ -218,43 +218,6 @@
     </article>
   </main>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-      };
-
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll('.fade-in, .slide-in').forEach(element => {
-        observer.observe(element);
-      });
-    });
-
-    // Page transition animations
-    document.body.classList.add('page-transition-enter');
-    window.addEventListener('load', () => {
-      document.body.classList.add('page-transition-enter-active');
-      setTimeout(() => {
-        document.body.classList.remove('page-transition-enter', 'page-transition-enter-active');
-      }, 500);
-    });
-
-    window.addEventListener('beforeunload', () => {
-      document.body.classList.add('page-transition-exit');
-      document.body.classList.add('page-transition-exit-active');
-    });
-  </script>
-
   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
 
     <footer>
@@ -296,6 +259,41 @@
       fadeInElements.forEach(element => {
         observer.observe(element);
       });
+    });
+
+        document.addEventListener('DOMContentLoaded', function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-in, .slide-in').forEach(element => {
+        observer.observe(element);
+      });
+    });
+
+    // Page transition animations
+    document.body.classList.add('page-transition-enter');
+    window.addEventListener('load', () => {
+      document.body.classList.add('page-transition-enter-active');
+      setTimeout(() => {
+        document.body.classList.remove('page-transition-enter', 'page-transition-enter-active');
+      }, 500);
+    });
+
+    window.addEventListener('beforeunload', () => {
+      document.body.classList.add('page-transition-exit');
+      document.body.classList.add('page-transition-exit-active');
     });
   </script>
 </body>
