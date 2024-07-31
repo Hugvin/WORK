@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Shift Bot</title>
+  <meta name="description" content="Privacy policy for Shift Bot.">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="./assets/images/logo1.png" alt="Shift Bot Logo">
+      </a>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a href="/" class="navbar-link">Home</a></li>
+          <li><a href="#about" class="navbar-link">About</a></li>
+          <li><a href="#dev" class="navbar-link">Developers</a></li>
+          <li><a href="#inv" class="navbar-link">Server</a></li>
+          <li><a href="https://discord.com/oauth2/authorize?client_id=1261751300983619644&response_type=code&redirect_uri=https%3A%2F%2Fshiftbot.xyz%2Fdashboard&scope=email+guilds+guilds.join" class="btn btn-dashboard">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <section id="privacy-policy">
+        <h2>1. Introduction</h2>
+        <p>Welcome to Shift Bot. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and use our services.</p>
+
+        <h2>2. Information We Collect</h2>
+        <p>We collect the following types of information in connection with the services we provide:</p>
+        <ul>
+          <li>Personal Identification Information: Name, email address.</li>
+          <li>Usage Data: Information about how you use our website and services.</li>
+          <li>Technical Data: Internet Protocol (IP) address, browser type and version, time zone setting, operating system and platform, and other technology on the devices you use to access this website.</li>
+        </ul>
+
+        <h2>3. How We Use Your Information</h2>
+        <p>We use the information we collect in the following ways:</p>
+        <ul>
+          <li>To provide, operate, and maintain our website and services.</li>
+          <li>To improve, personalize, and expand our website and services.</li>
+          <li>To understand and analyze how you use our website and services.</li>
+          <li>To communicate with you, either directly or through our partners, to provide you with information, updates, and promotional materials related to our services.</li>
+          <li>To comply with legal obligations and protect our rights.</li>
+        </ul>
+
+        <h2>4. Sharing Your Information</h2>
+        <p>We do not sell or rent your personal data to third parties. We may share your information with:</p>
+        <ul>
+          <li>Service Providers: We may share your information with third-party service providers who perform services on our behalf, such as hosting, analytics, and marketing services.</li>
+          <li>Legal Requirements: We may disclose your information if required to do so by law or in response to valid requests by public authorities.</li>
+          <li>Business Transfers: In the event of a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred as part of that transaction.</li>
+        </ul>
+
+        <h2>5. Data Security</h2>
+        <p>We implement appropriate technical and organizational measures to protect your personal data from unauthorized access, disclosure, alteration, or destruction. However, please be aware that no security measures are perfect or impenetrable.</p>
+
+        <h2>6. Your Data Protection Rights</h2>
+        <p>Depending on your location, you may have certain rights regarding your personal data, including:</p>
+        <ul>
+          <li>The right to access and obtain a copy of your personal data.</li>
+          <li>The right to correct inaccurate or incomplete personal data.</li>
+          <li>The right to request the deletion of your personal data under certain circumstances.</li>
+          <li>The right to restrict or object to the processing of your personal data.</li>
+          <li>The right to data portability, allowing you to obtain and reuse your data across different services.</li>
+        </ul>
+
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the effective date at the top. You are encouraged to review this Privacy Policy periodically for any changes.</p>
+
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+        <p>Email: shiftbot.public@gmail.com</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Shift Bot. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
