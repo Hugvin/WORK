@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Dashboard</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="/assets/images/logo1.png" alt="Logo" />
+        <h1 id="server-name">Server Dashboard</h1>
+    </header>
+
+    <section id="dashboard-content">
+        <h2>Server Settings</h2>
+        <p id="server-description">Here you can manage the bot within this server.</p>
+
+        <div id="server-options">
+            <button id="kick-bot-btn">Kick Bot</button>
+            <button id="server-info-btn">Show Server Info</button>
+        </div>
+
+        <div id="server-details" style="display:none;">
+            <h3>Server Information:</h3>
+            <p id="server-id"></p>
+            <p id="server-owner"></p>
+        </div>
+    </section>
+
+    <script src="/assets/js/dashboard.js"></script>
+</body>
+</html>
