@@ -8,23 +8,19 @@
     <title>Shift Bot - Homepage</title>
     <meta name="description" content="Welcome to Shift Bot, the ultimate bot for managing your server. Explore our features and get started today!">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header class="header">
         <div class="container">
             <a href="/" class="logo">
-                <img src="./assets/images/logo.png" width="185" height="31" alt="Shift Bot Logo">
+                <img src="./assets/images/logo.png" alt="Shift Bot Logo" class="logo-img">
             </a>
             <nav class="navbar">
-                <div class="navbar-top">
-                    <a href="/" class="logo">
-                        <img src="./assets/images/logo1.png" width="185" height="31" alt="Shift Bot Logo">
-                    </a>
-                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler="">
-                        <span class="icon-close"></span>
-                    </button>
-                </div>
+                <button class="nav-open-btn" aria-label="open menu" data-nav-toggler="">
+                    <span class="icon-menu"></span>
+                </button>
                 <ul class="navbar-list">
                     <li><a href="/" class="navbar-link">Home</a></li>
                     <li><a href="#features" class="navbar-link">Features</a></li>
@@ -32,10 +28,10 @@
                     <li><a href="#contact" class="navbar-link">Contact</a></li>
                     <li><a href="https://discord.com/oauth2/authorize?client_id=1261747027302416384&permissions=8&response_type=code&redirect_uri=https%3A%2F%2Fshiftbot.xyz%2Fdashboard&integration_type=0&scope=bot+applications.commands+identify+guilds+guilds.join+email" class="btn btn-primary">Get Started</a></li>
                 </ul>
+                <button class="nav-close-btn" aria-label="close menu" data-nav-toggler="">
+                    <span class="icon-close"></span>
+                </button>
             </nav>
-            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler="">
-                <span class="icon-menu"></span>
-            </button>
             <div class="overlay" data-overlay="" data-nav-toggler=""></div>
         </div>
     </header>
@@ -53,28 +49,28 @@
                 </div>
                 <div class="hero-banner">
                     <figure class="hero-banner-img">
-                        <img src="./assets/images/hero-banner.png" width="499" height="423" alt="Shift Bot Hero Banner" class="w-100">
+                        <img src="./assets/images/hero-banner.png" alt="Shift Bot Hero Banner" class="w-100">
                     </figure>
                 </div>
             </div>
         </section>
 
-        <section class="features" aria-label="features">
+        <section class="features" id="features" aria-label="features">
             <div class="container">
                 <h2 class="section-title">Features</h2>
                 <div class="feature-list">
                     <div class="feature-item">
-                        <span class="icon-feature"></span>
+                        <span class="icon-feature icon-feature-one"></span>
                         <h3 class="feature-title">Feature One</h3>
                         <p class="feature-description">Description of feature one.</p>
                     </div>
                     <div class="feature-item">
-                        <span class="icon-feature"></span>
+                        <span class="icon-feature icon-feature-two"></span>
                         <h3 class="feature-title">Feature Two</h3>
                         <p class="feature-description">Description of feature two.</p>
                     </div>
                     <div class="feature-item">
-                        <span class="icon-feature"></span>
+                        <span class="icon-feature icon-feature-three"></span>
                         <h3 class="feature-title">Feature Three</h3>
                         <p class="feature-description">Description of feature three.</p>
                     </div>
@@ -82,14 +78,14 @@
             </div>
         </section>
 
-        <section class="about" aria-label="about">
+        <section class="about" id="about" aria-label="about">
             <div class="container">
                 <h2 class="section-title">About Us</h2>
                 <p class="section-text">Shift Bot is designed to enhance your server management experience with a range of powerful features. Learn more about what makes Shift Bot the best choice for your server needs.</p>
             </div>
         </section>
 
-        <section class="contact" aria-label="contact">
+        <section class="contact" id="contact" aria-label="contact">
             <div class="container">
                 <h2 class="section-title">Contact Us</h2>
                 <p class="section-text">If you have any questions or need support, feel free to reach out to us through our Discord server.</p>
@@ -99,11 +95,11 @@
     </main>
 
     <footer class="footer">
-        <div class="footer-top section">
+        <div class="footer-top">
             <div class="container">
                 <div class="footer-brand">
                     <a href="/" class="logo">
-                        <img src="./assets/images/logo1.png" width="185" height="31" alt="Shift Bot Logo">
+                        <img src="./assets/images/logo1.png" alt="Shift Bot Logo" class="logo-img">
                     </a>
                     <p class="footer-text">Shift Bot, the ultimate bot for managing your server.</p>
                 </div>
