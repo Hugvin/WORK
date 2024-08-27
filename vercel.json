@@ -37,5 +37,11 @@
       "source": "/api/bot-in-guild/:guildId",
       "destination": "/api/bot-in-guild/[guildId].js"
     }
+  ],
+  "middleware": [
+    {
+      "source": "/:path*",
+      "destination": "middleware.js"
+    }
   ]
 }
